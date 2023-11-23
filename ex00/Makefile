@@ -1,6 +1,6 @@
 NAME = Animal
 
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp
+SRC = Animal.cpp Cat.cpp Dog.cpp main.cpp 
 HDF = Animal.hpp Cat.hpp Dog.hpp
 OBJ = $(SRC:.cpp=.o )
 

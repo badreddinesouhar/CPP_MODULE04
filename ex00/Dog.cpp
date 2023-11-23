@@ -6,12 +6,11 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:28:36 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/09 16:32:07 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/24 00:16:28 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
-#include "Animal.hpp"
 
 Dog::Dog() {
     std::cout << "Dog constractour" << std::endl;
@@ -19,4 +18,30 @@ Dog::Dog() {
 
 Dog::~Dog() {
     std::cout << "Dog deconstractor" << std::endl;    
+}
+
+Dog::Dog(const Dog& dog) {
+    if (this->type != dog.type)
+        this->type = dog.type;
+}
+
+bool Dog::operator!=(const Dog &dog) {
+    if (this->type != dog.type)
+        return true;
+    return false;
+}
+
+Dog& Dog::operator=(const Dog &dog) {
+    if(*this != dog) {
+        this->type = dog.type;
+    }
+    return *this;
+}
+
+std::string Dog::getType() const {
+    return type;
+}
+
+void Dog::makeSound() const {
+    std::cout << "Da Dog " << type << " made a sound" << std::endl;
 }

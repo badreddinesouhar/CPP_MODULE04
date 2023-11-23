@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:22:35 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/10/27 10:33:47 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/24 00:07:27 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ int main() {
     i->makeSound(); //will output the cat sound!
     j->makeSound();
     meta->makeSound();
-    ...
     return 0;
 }

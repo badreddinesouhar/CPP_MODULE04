@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:12:12 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/09 16:48:28 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/24 00:16:08 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 #define ANIMAL_HPP
 
 #include <iostream>
-#include "Cat.hpp"
-#include "Dog.hpp"
 
 class Animal {
     protected:
         std::string type;
     public:
         Animal();
-        ~Animal();
+        Animal(const Animal& animal);
+        Animal& operator=(const Animal &animal);
+        virtual ~Animal();
+        virtual void makeSound() const ;
+        virtual std::string getType() const ;
 };
 
 #endif
