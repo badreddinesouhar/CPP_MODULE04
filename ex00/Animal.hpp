@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:12:12 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 09:47:00 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/24 10:22:06 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ class Animal {
         Animal();
         Animal(const Animal& animal);
         Animal& operator=(const Animal &animal);
-        ~Animal();
+        std::string getType() const ;
+        virtual ~Animal();
         virtual void makeSound() const ;
-        virtual std::string getType() const ;
 };
 
 #endif

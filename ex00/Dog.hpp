@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:16:14 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 00:16:36 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/24 10:22:23 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class Dog : public Animal {
         bool operator!=(const Dog &dog);
         ~Dog();
         void makeSound() const ;
-        std::string getType() const;
 };
 
 #endif

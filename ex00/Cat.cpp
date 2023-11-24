@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:16:23 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 09:23:49 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/24 10:17:06 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,6 @@ Cat& Cat::operator=(const Cat& cat) {
 
 Cat::~Cat() {
     std::cout << "Cat destrctour" << std::endl;
-}
-
-std::string Cat::getType() const {
-    return type;
 }
 
 void Cat::makeSound() const {

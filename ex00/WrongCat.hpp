@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 09:25:15 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 09:57:22 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/24 10:24:43 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class WrongCat : public WrongAnimal {
         WrongCat& operator=(const WrongCat& copy);
         WrongCat(const WrongCat& WrongCat);
         ~WrongCat();
-        std::string getType() const;
         void makeSound() const;
 };
 

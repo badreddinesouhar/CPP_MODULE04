@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:28:36 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 09:24:10 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/24 10:17:13 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,6 @@ Dog& Dog::operator=(const Dog &dog) {
         this->type = dog.type;
     }
     return *this;
-}
-
-std::string Dog::getType() const {
-    return type;
 }
 
 void Dog::makeSound() const {

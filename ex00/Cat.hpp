@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:30:20 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 00:16:22 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/24 10:22:18 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class Cat : public Animal {
     Cat& operator=(const Cat &cat);
     ~Cat();
     void makeSound() const ;
-    std::string getType() const ;
 };
 
 #endif

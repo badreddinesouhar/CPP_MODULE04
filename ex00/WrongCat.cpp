@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 09:25:12 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 10:04:39 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/24 10:24:39 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ WrongCat::~WrongCat() {
 }
 
 WrongCat& WrongCat::operator=(const WrongCat& wrongcat) {
+    std::cout << "wrong cat copy assignemnt operator has been called" << std::endl;
     if(this->type != wrongcat.type) {
         this->type = wrongcat.type;
     }
@@ -29,13 +30,10 @@ WrongCat& WrongCat::operator=(const WrongCat& wrongcat) {
 }
 
 WrongCat::WrongCat(const WrongCat& copy) {
+    std::cout << "copy desctractor" <<std::endl;
     *this = copy;
 }
 
-std::string WrongCat::getType() const {
-    return type;
-}
-
 void WrongCat::makeSound() const {
-    std::cout << "the " << type << " made a sound" << std::endl;
+    std::cout << "the wrong cat made a sound" << std::endl;
 }
