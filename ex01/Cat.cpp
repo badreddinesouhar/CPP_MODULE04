@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:16:23 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 13:26:23 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/24 13:22:40 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ Cat::Cat(const Cat& cat) {
 Cat& Cat::operator=(const Cat& cat) {
     if (this->type != cat.type)
         this->type = cat.type;
-    if (this->b)
-        delete this->b;
+    if (b)
+        delete b;
     this->b = new Brain(*(cat.b));
     return (*this);
 }

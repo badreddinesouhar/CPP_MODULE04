@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:22:35 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 13:27:08 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/24 12:53:36 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,34 +17,20 @@
 #include "WrongCat.hpp"
 
 int main() {
+    const int arraySize = 10;
+    Animal* animalArray[arraySize];
 
-    Cat myCat;
-    std::cout << "Cat type: " << myCat.getType() << std::endl;
-    myCat.makeSound();
-    
-    Dog myDog;
-    std::cout << "Dog type: " << myDog.getType() << std::endl;
-    myDog.makeSound();
+    for (int i = 0; i < arraySize; ++i) {
+        if (i < arraySize / 2) {
+            animalArray[i] = new Dog();
+        } else {
+            animalArray[i] = new Cat();
+        }
+    }
 
+    for (int i = 0; i < arraySize; ++i) {
+        delete animalArray[i];
+    }
 
-    // test form ex00
-    
-    // const Animal* meta = new Animal();
-    
-    // const Animal* j = new Dog();
-    // const Animal* i = new Cat();
-    
-    // std::cout << j->getType() << " " << std::endl;
-    // std::cout << i->getType() << " " << std::endl;
-    
-    // i->makeSound(); //will output the cat sound!
-    // j->makeSound();
-    
-    // meta->makeSound();
-
-    // delete i;
-    // delete j;
-    // delete meta;
-    
     return 0;
 }
