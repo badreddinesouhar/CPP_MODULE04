@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:28:36 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 00:16:28 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/24 09:24:10 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Dog::Dog() {
     std::cout << "Dog constractour" << std::endl;
+    type = "dog";
 }
 
 Dog::~Dog() {

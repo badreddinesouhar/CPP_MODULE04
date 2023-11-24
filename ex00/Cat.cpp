@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:16:23 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 00:15:54 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/24 09:23:49 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Cat::Cat() {
     std::cout << "Cat constractour" << std::endl;
+    type = "cat";
 }
 
 Cat::Cat(std::string name) {
