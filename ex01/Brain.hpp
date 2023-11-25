@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 10:30:01 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 11:17:22 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/25 07:47:15 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 
 class Brain {
     private:
-
+        std::string *ideas;
     public:
         Brain();
         Brain(const Brain& copy);
         Brain& operator=(const Brain& brain);
         ~Brain();
-        std::string ideas[100];
+        std::string *getideas();
 };
 
 #endif

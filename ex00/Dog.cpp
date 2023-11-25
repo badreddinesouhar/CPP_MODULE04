@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:28:36 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 10:17:13 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/25 07:39:38 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,11 @@ Dog::~Dog() {
 }
 
 Dog::Dog(const Dog& dog) {
-    if (this->type != dog.type)
-        this->type = dog.type;
-}
-
-bool Dog::operator!=(const Dog &dog) {
-    if (this->type != dog.type)
-        return true;
-    return false;
+    this->type = dog.getType();
 }
 
 Dog& Dog::operator=(const Dog &dog) {
-    if(*this != dog) {
-        this->type = dog.type;
-    }
+    this->type = dog.getType();
     return *this;
 }
 

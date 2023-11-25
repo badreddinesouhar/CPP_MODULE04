@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:22:35 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 13:27:08 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/25 08:14:01 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,25 +26,21 @@ int main() {
     std::cout << "Dog type: " << myDog.getType() << std::endl;
     myDog.makeSound();
 
-
     // test form ex00
     
-    // const Animal* meta = new Animal();
-    
+    // const Animal* meta = new Animal();    
     // const Animal* j = new Dog();
     // const Animal* i = new Cat();
-    
     // std::cout << j->getType() << " " << std::endl;
     // std::cout << i->getType() << " " << std::endl;
-    
     // i->makeSound(); //will output the cat sound!
     // j->makeSound();
-    
     // meta->makeSound();
-
     // delete i;
     // delete j;
     // delete meta;
     
+    system("leaks Animal");
+  
     return 0;
 }

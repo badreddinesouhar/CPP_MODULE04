@@ -6,15 +6,15 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:16:23 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 10:17:06 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/25 07:40:25 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 Cat::Cat() {
-    std::cout << "Cat constractour" << std::endl;
     type = "cat";
+    std::cout << "Cat constractour" << std::endl;
 }
 
 Cat::Cat(std::string name) {
@@ -23,19 +23,11 @@ Cat::Cat(std::string name) {
 }
 
 Cat::Cat(const Cat& cat) {
-    this->type = cat.type;
-}
-
-bool Cat::operator!=(const Cat& cat) {
-    if (this->type != cat.type)
-        return true;
-    return false;
+    this->type = cat.getType();
 }
 
 Cat& Cat::operator=(const Cat& cat) {
-    if(*this != cat) {
-        this->type = cat.type;
-    }
+    this->type = cat.getType();
     return (*this);
 }
 

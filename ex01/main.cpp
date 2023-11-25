@@ -6,15 +6,13 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:22:35 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 12:53:36 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/25 08:05:23 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
-#include "WrongAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongCat.hpp"
 
 int main() {
     const int arraySize = 10;
@@ -32,5 +30,6 @@ int main() {
         delete animalArray[i];
     }
 
+    system("leaks Animal");
     return 0;
 }

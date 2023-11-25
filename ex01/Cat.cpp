@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:16:23 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 13:22:40 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/25 08:04:05 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ Cat::Cat(std::string name) {
 
 Cat::Cat(const Cat& cat) {
     this->type = cat.type;
+    delete this->b;
     this->b = new Brain(*(cat.b));
 }
 
 Cat& Cat::operator=(const Cat& cat) {
     if (this->type != cat.type)
         this->type = cat.type;
-    if (b)
-        delete b;
+    delete this->b;
     this->b = new Brain(*(cat.b));
     return (*this);
 }

@@ -6,25 +6,36 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 10:29:58 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 12:03:14 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/25 08:10:58 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
 
 Brain::Brain() {
+    ideas = new std::string[100];
+    for (int i = 0; i < 100; i++) {
+        ideas[i] = "Brain idea";
+    }
     std::cout << "Brain constractor has been called" << std::endl;
 }
 
 Brain::~Brain() {
     std::cout << "Brain deconstractor has been called" << std::endl;
+    delete[] ideas;
 }
 
 Brain& Brain::operator=(const Brain& brain) {
-    (void)brain;
+    for(int i = 0; i < 100; i++) {
+        this->ideas[i] = brain.ideas[i];
+    }
     return *this;
 }
 
 Brain::Brain(const Brain& copy) {
     *this = copy;
+}
+
+std::string *Brain::getideas() {
+    return (ideas);
 }
