@@ -12,3 +12,10 @@
 
 #include "Ice.hpp"
 
+Ice::Ice() : _type("ice") {
+    
+}
+
+Ice::~Ice() {
+
+}

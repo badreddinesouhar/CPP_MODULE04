@@ -14,11 +14,12 @@
 #define ICE_HPP
 
 #include <iostream>
+#include "AMateria.hpp"
 #include "ICharacter.hpp"
 
-class Ice {
+class Ice : public AMateria {
     private:
-        std::string type;
+        std::string _type;
     public:
        Ice();
        ~Ice();

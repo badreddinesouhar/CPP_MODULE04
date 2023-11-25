@@ -15,10 +15,11 @@
 
 #include <iostream>
 #include "ICharacter.hpp"
+#include "AMateria.hpp"
 
-class Cure {
+class Cure : public AMateria {
     private:
-        std::string type;
+        std::string _type;
     public:
        Cure();
        ~Cure();

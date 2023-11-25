@@ -10,3 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "AMateria.hpp"
+
+AMateria::AMateria() {
+    std::cout << "AMateria abstract class is called" << std::endl;
+}
+
+AMateria::AMateria(std::string const & type) {
+    _type = type;
+}
