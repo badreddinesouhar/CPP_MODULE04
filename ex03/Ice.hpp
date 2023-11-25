@@ -6,7 +6,17 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:12:11 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 14:12:12 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/25 09:15:13 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ICE_HPP
+#define ICE_HPP
+
+#include <iostream>
+
+class {
+
+};
+
+#endif

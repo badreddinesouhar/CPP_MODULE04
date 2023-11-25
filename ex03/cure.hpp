@@ -6,7 +6,17 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:12:03 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 14:12:04 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/25 09:14:10 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CURE_HPP
+#define CURE_HPP
+
+#include <iostream>
+
+class Cure {
+    
+};
+
+#endif
