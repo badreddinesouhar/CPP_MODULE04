@@ -22,15 +22,13 @@ Animal::~Animal() {
 }
 
 Animal::Animal(const Animal& animal) {
-    *this = animal;
+    this->type = animal.getType();
+    std::cout << "copy constractor has been called" << std::endl;
 }
 
 Animal& Animal::operator=(const Animal &animal) {
-    if (this != &animal) {
-        this->type = animal.type;
-        *this = animal;
-    }
-    return(*this);
+    this->type = animal.getType();
+    return *this;
 }
 
 std::string Animal::getType() const {
