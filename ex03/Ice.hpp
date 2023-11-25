@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:12:11 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/25 09:15:13 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/25 09:23:32 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,16 @@
 #define ICE_HPP
 
 #include <iostream>
+#include "ICharacter.hpp"
 
-class {
-
+class Ice {
+    private:
+        std::string type;
+    public:
+       Ice();
+       ~Ice();
+       Ice& clone();
+       void use(ICharacter& );
 };
 
 #endif
