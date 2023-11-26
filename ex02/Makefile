@@ -1,7 +1,7 @@
 NAME = Animal
 
-SRC = Animal.cpp Cat.cpp Dog.cpp main.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
-HDF = Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
+SRC = Animal.cpp Cat.cpp Dog.cpp main.cpp Brain.cpp
+HDF = Animal.hpp Cat.hpp Dog.hpp Brain.hpp
 OBJ = $(SRC:.cpp=.o )
 
 %.o: %.cpp $(HDF)
