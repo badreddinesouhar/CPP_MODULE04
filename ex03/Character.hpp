@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:02:24 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 10:42:50 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 13:21:41 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Character : public ICharacter {
     private:
         std::string _name;
         AMateria *(inventory[4]);
+        AMateria *(starch[4]);
     public:
         Character();
         ~Character();

@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:02:27 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 13:12:35 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 14:06:29 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,20 @@ Character::Character() {
     _name = "character";
     for (int i = 0; i < 4; i++) {
         inventory[i] = NULL;
+        starch[i] = NULL;
     } 
     // std::cout << "default constractor has been called" << std::endl;
 }
 
 Character::~Character() {
+    for(int i = 0; i < 4; i++ ) {
+        if(starch[i])
+            delete starch[i];
+    }
+    for (int i = 0; i < 4; i++) {
+        if(inventory[i])
+            delete inventory[i];
+    }
     // std::cout << _name << " is destroyed" << std::endl;
 }
 
@@ -45,32 +54,6 @@ Character& Character::operator=(const Character& character) {
     return (*this);
 }
 
-// void Character::equip(AMateria *m) {
-//     if(!m)
-//         return;
-//     for (int i = 4; i < 4; i++) {
-//         if (!inventory[i]) {
-//             inventory[i] = m->clone();
-//             return;
-//         }
-//     }
-//     delete m;
-// }
-
-// void Character::unequip(int idx) {
-//     if (idx >= 0 && idx < 4 ) {
-//         if(inventory[idx] != NULL)
-//             inventory[idx] = NULL;
-//     }
-// }
-
-// void Character::use(int idx, ICharacter& target) {
-//     if (idx > 0 && idx < 4) {
-//         if (inventory[idx] != NULL)
-//             inventory[idx]->use(target);
-//     }
-// }
-
 void Character::equip(AMateria *m) {
     if (!m)
         return;
@@ -80,11 +63,19 @@ void Character::equip(AMateria *m) {
             return;
         }
     }
+    for(int i = 0; i < 4; i++ ) {
+        if(starch[i])
+            delete starch[i];
+    }
     delete m;
 }
 
 void Character::unequip(int idx) {
     if (idx >= 0 && idx < 4) {
+        for (int i = 0; i < 4; i++) {
+            if (starch[i] == NULL)
+                starch[i] = inventory[idx];
+        }
         inventory[idx] = NULL;
     }
 }

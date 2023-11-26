@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:02:09 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 13:10:35 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 14:14:22 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,19 @@ MateriaSource::MateriaSource() {
 }
 
 MateriaSource::~MateriaSource() {
+     for (int i = 0; i < 4; i++) {
+        if(inventory[i])
+            delete inventory[i];
+    }
+}
+
+MateriaSource::MateriaSource(const MateriaSource& copy) {
     
 }
+
+ MateriaSource& MateriaSource::operator=(const MateriaSource& materiasource) {
+    
+ }
 
 void MateriaSource::learnMateria(AMateria* learn) {
     for (int i = 0; i < 4; i++) {
