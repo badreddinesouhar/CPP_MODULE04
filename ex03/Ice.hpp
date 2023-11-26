@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:12:11 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/25 09:23:32 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 09:45:08 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,11 @@ class Ice : public AMateria {
         std::string _type;
     public:
        Ice();
+       Ice(const Ice& copy);
+       Ice& operator=(const Ice& ice);
        ~Ice();
-       Ice& clone();
-       void use(ICharacter& );
+       Ice* clone() const;
+       void use(ICharacter& target);
 };
 
 #endif
