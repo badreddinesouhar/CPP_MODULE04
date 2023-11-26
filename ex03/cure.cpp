@@ -6,14 +6,15 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:12:07 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 12:19:34 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 13:04:11 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure() : _type("cure") {
-    // std::cout << this->_type << " has been constracted" << std::endl;
+Cure::Cure() : AMateria("cure") {
+    _type = "cure";
+    std::cout << _type << " has been constracted" << std::endl;
 }
 
 Cure::Cure(const Cure& cure) {
@@ -29,9 +30,8 @@ Cure::~Cure() {
     // std::cout << this->_type << " has been destroyed" << std::endl;
 }
 
-Cure* Cure::clone() const {
-    Cure *inst = new Cure();
-    return (inst);
+AMateria* Cure::clone() const {
+    return (new Cure());
 }
 
 void Cure::use(ICharacter& target) {

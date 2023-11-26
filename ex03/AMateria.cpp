@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:13:39 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 12:20:52 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 13:08:06 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ AMateria::AMateria(std::string const & type) {
     _type = type;
 }
 
-// void AMateria::use(ICharacter& target) {
-//     (void)target;
-//     std::cout << "wtf" << std::endl;
-// }
+void AMateria::use(ICharacter& target) {
+    (void)target;
+}

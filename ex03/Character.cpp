@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:02:27 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 12:20:26 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 13:12:35 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Character::Character(std::string name) {
     for (int i = 0; i < 4; i++) {
         inventory[i] = NULL;
     }
-    // std::cout << name << " is constracted" << std::endl;
+    std::cout << name << " is constracted" << std::endl;
 }
 
 std::string const &Character::getName() const {
@@ -45,26 +45,52 @@ Character& Character::operator=(const Character& character) {
     return (*this);
 }
 
+// void Character::equip(AMateria *m) {
+//     if(!m)
+//         return;
+//     for (int i = 4; i < 4; i++) {
+//         if (!inventory[i]) {
+//             inventory[i] = m->clone();
+//             return;
+//         }
+//     }
+//     delete m;
+// }
+
+// void Character::unequip(int idx) {
+//     if (idx >= 0 && idx < 4 ) {
+//         if(inventory[idx] != NULL)
+//             inventory[idx] = NULL;
+//     }
+// }
+
+// void Character::use(int idx, ICharacter& target) {
+//     if (idx > 0 && idx < 4) {
+//         if (inventory[idx] != NULL)
+//             inventory[idx]->use(target);
+//     }
+// }
+
 void Character::equip(AMateria *m) {
-    if(!m)
+    if (!m)
         return;
-    for (int i = 4; i < 4; i++) {
+    for (int i = 0; i < 4; i++) {
         if (!inventory[i]) {
             inventory[i] = m->clone();
             return;
         }
     }
+    delete m;
 }
 
 void Character::unequip(int idx) {
-    if (idx >= 0 && idx < 4 ) {
-        if(inventory[idx] != NULL)
-            inventory[idx] = NULL;
+    if (idx >= 0 && idx < 4) {
+        inventory[idx] = NULL;
     }
 }
 
 void Character::use(int idx, ICharacter& target) {
-    if (idx > 0 && idx < 4) {
+    if (idx >= 0 && idx < 4) {
         if (inventory[idx] != NULL)
             inventory[idx]->use(target);
     }

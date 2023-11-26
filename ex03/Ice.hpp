@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:12:11 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 10:56:52 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 12:58:43 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Ice : public AMateria {
        Ice(const Ice& copy);
        Ice& operator=(const Ice& ice);
        ~Ice();
-       Ice* clone() const;
+       AMateria* clone() const;
        void use(ICharacter& target);
 };
 

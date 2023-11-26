@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:02:09 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 11:00:03 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 13:10:35 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,23 @@ MateriaSource::~MateriaSource() {
 }
 
 void MateriaSource::learnMateria(AMateria* learn) {
-    if (!learn)
-        return;
     for (int i = 0; i < 4; i++) {
         if (inventory[i] == NULL) {
             inventory[i] = learn->clone();
             return;
         }
     }
+    delete learn;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type) {
     for (int i = 0; i < 4; i++) {
         if (inventory[i] && inventory[i]->getType() == type) {
-            return inventory[i]->clone(); // Assuming you have a clone function in AMateria
+            std::cout << "cloned" << std::endl;
+            return inventory[i]->clone();
         }
     }
     return 0;
 }
+
+
