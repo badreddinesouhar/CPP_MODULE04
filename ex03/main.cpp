@@ -6,13 +6,14 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 09:25:45 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 09:41:43 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 11:27:08 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "IMateriaSource.hpp"
-#include "AMateria.hpp"
-#include "ICharacter.hpp"
+#include "Character.hpp"
+#include "MateriaSource.hpp"
+#include "Ice.hpp"
+#include "cure.hpp"
 
 int main() {
 

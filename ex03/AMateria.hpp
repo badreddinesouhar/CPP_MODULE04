@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:06:59 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 09:28:21 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 11:24:54 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #define AMATERIA_HPP
 
 #include <iostream>
-#include "ICharacter.hpp"
+
+class ICharacter;
 
 class AMateria
 {

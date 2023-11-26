@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:02:24 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 10:03:34 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 10:42:50 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ class Character : public ICharacter {
         Character& operator=(const Character& character);
         Character(std::string name);
         std::string const & getName() const;
+        void equip(AMateria* m);
+        void unequip(int idx);
+        void use(int idx, ICharacter& target);
         
 };
 
