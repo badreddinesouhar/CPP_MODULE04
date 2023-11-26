@@ -6,14 +6,14 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:12:14 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 11:49:39 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 12:19:45 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
 Ice::Ice() : _type("ice") {
-    std::cout << "ice is constracted" << std::endl;
+    // std::cout << "ice is constracted" << std::endl;
 }
 
 Ice::Ice(const Ice& copy) {
@@ -26,7 +26,7 @@ Ice& Ice::operator=(const Ice& ice) {
 }
 
 Ice::~Ice() {
-    std::cout << "ice is destroyed" << std::endl;
+    // std::cout << "ice is destroyed" << std::endl;
 }
 
 Ice* Ice::clone() const {

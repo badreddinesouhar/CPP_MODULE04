@@ -6,18 +6,18 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:13:39 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 09:18:09 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 12:20:52 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
 AMateria::AMateria() {
-    std::cout << "AMateria abstract class is called" << std::endl;
+    // std::cout << "AMateria abstract class is called" << std::endl;
 }
 
 AMateria::~AMateria() {
-    std::cout << "AMateria destractor" << std::endl;
+    // std::cout << "AMateria destractor" << std::endl;
 }
 
 std::string const &AMateria::getType() const {
@@ -36,3 +36,8 @@ AMateria& AMateria::operator=(const AMateria& amateria) {
 AMateria::AMateria(std::string const & type) {
     _type = type;
 }
+
+// void AMateria::use(ICharacter& target) {
+//     (void)target;
+//     std::cout << "wtf" << std::endl;
+// }

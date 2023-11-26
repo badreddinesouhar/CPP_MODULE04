@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:06:59 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 11:47:00 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 12:21:00 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class AMateria {
 
         std::string const & getType() const; //Returns the materia type
         virtual AMateria* clone() const = 0;
-        virtual void use(ICharacter& target);
+        virtual void use(ICharacter& target) = 0;
 };
 
 #endif

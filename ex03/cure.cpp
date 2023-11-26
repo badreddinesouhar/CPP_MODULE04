@@ -6,15 +6,14 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:12:07 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 11:49:44 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 12:19:34 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cure.hpp"
+#include "Cure.hpp"
 
 Cure::Cure() : _type("cure") {
-    _type = "cure";
-    std::cout << this->_type << "has been constracted" << std::endl;
+    // std::cout << this->_type << " has been constracted" << std::endl;
 }
 
 Cure::Cure(const Cure& cure) {
@@ -27,7 +26,7 @@ Cure& Cure::operator=(const Cure& copy) {
 }
 
 Cure::~Cure() {
-    std::cout << this->_type << "has been destroyed" << std::endl;
+    // std::cout << this->_type << " has been destroyed" << std::endl;
 }
 
 Cure* Cure::clone() const {

@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:02:27 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 10:53:20 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 12:20:26 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ Character::Character() {
     for (int i = 0; i < 4; i++) {
         inventory[i] = NULL;
     } 
-    std::cout << "default constractor has been called" << std::endl;
+    // std::cout << "default constractor has been called" << std::endl;
 }
 
 Character::~Character() {
-    std::cout << _name << " is destroyed" << std::endl;
+    // std::cout << _name << " is destroyed" << std::endl;
 }
 
 Character::Character(std::string name) {
@@ -29,7 +29,7 @@ Character::Character(std::string name) {
     for (int i = 0; i < 4; i++) {
         inventory[i] = NULL;
     }
-    std::cout << name << " is constracted" << std::endl;
+    // std::cout << name << " is constracted" << std::endl;
 }
 
 std::string const &Character::getName() const {
