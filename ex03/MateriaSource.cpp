@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:02:09 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 14:14:22 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 14:17:09 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ MateriaSource::~MateriaSource() {
     }
 }
 
-MateriaSource::MateriaSource(const MateriaSource& copy) {
+// MateriaSource::MateriaSource(const MateriaSource& copy) {
     
-}
+// }
 
- MateriaSource& MateriaSource::operator=(const MateriaSource& materiasource) {
+//  MateriaSource& MateriaSource::operator=(const MateriaSource& materiasource) {
     
- }
+// }
 
 void MateriaSource::learnMateria(AMateria* learn) {
     for (int i = 0; i < 4; i++) {
@@ -46,7 +46,6 @@ void MateriaSource::learnMateria(AMateria* learn) {
 AMateria* MateriaSource::createMateria(std::string const & type) {
     for (int i = 0; i < 4; i++) {
         if (inventory[i] && inventory[i]->getType() == type) {
-            std::cout << "cloned" << std::endl;
             return inventory[i]->clone();
         }
     }

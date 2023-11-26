@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:22:35 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/25 08:14:01 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 14:17:27 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int main() {
     // delete j;
     // delete meta;
     
-    system("leaks Animal");
+    // system("leaks Animal");
   
     return 0;
 }

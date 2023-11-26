@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 09:25:45 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 14:07:23 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 14:17:20 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int main() {
     delete bob;
     delete me;
     delete src;
+    
+    // system ("leaks Materia");
     
     return 0;
 }
