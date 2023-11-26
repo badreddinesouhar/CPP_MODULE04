@@ -25,14 +25,14 @@ Cat::Cat(std::string name) {
 
 Cat::Cat(const Cat& cat) : Animal(cat) {
     this->type = cat.type;
-    delete this->b;
     this->b = new Brain(*(cat.b));
 }
 
 Cat& Cat::operator=(const Cat& cat) {
     if (this->type != cat.type)
         this->type = cat.type;
-    delete this->b;
+    if (this->b)
+        delete this->b;
     this->b = new Brain(*(cat.b));
     return (*this);
 }

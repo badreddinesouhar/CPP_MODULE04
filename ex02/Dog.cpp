@@ -23,16 +23,16 @@ Dog::~Dog() {
     delete this->b;
 }
 
-Dog::Dog(const Dog& dog) : Animal(dog) {
+Dog::Dog(const Dog& dog) :Animal(dog) {
     this->type = dog.type;
-    delete this->b;
     this->b = new Brain(*(dog.b));
 }
 
 Dog& Dog::operator=(const Dog &dog) {
     if (this->type != dog.type)
         this->type = dog.type;
-    delete this->b;
+    if(this->b)
+        delete this->b;
     this->b = new Brain(*(dog.b));
     return *this;
 }
