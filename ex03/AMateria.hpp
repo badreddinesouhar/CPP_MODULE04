@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:06:59 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 11:28:09 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 11:47:00 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 #include <iostream>
 
-class AMateria
-{
+class ICharacter;
+
+class AMateria {
     protected:
         std::string _type;
     public:

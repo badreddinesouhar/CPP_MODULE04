@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:14:11 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 11:28:23 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 11:47:13 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 #include <iostream>
 
-class ICharacter
-{
+class AMateria;
+
+class ICharacter {
     public:
         virtual ~ICharacter() {}
         virtual std::string const & getName() const = 0;

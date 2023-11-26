@@ -6,14 +6,13 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:12:14 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 09:45:24 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/26 11:49:39 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice() : AMateria("ice") {
-    _type = "ice";
+Ice::Ice() : _type("ice") {
     std::cout << "ice is constracted" << std::endl;
 }
 

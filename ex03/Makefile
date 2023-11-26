@@ -1,7 +1,7 @@
 NAME = Materia
 
-SRC = AMateria.cpp Ice.cpp Cure.cpp Character.cpp MateriaSource.cpp main.cpp
-HDF = AMateria.hpp Ice.hpp Cure.hpp ICharacter.hpp IMateriaSource.hpp
+SRC = main.cpp AMateria.cpp Ice.cpp Character.cpp MateriaSource.cpp Cure.cpp
+HDF = AMateria.hpp Ice.hpp Cure.hpp ICharacter.hpp IMateriaSource.hpp Character.hpp MateriaSource.hpp
 OBJ = $(SRC:.cpp=.o)
 
 CC = c++
