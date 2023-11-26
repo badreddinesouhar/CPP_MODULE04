@@ -45,12 +45,22 @@ std::string const &Character::getName() const {
     return _name;
 }
 
-Character::Character(const Character& copy) {
-    this->_name = copy.getName();
+Character::Character(Character const & copy) {
+    _name = copy.getName();
+    for(int i = 0; i < 4; i++) {
+        if (copy.inventory[i])
+            this->inventory[i] = copy.inventory[i]->clone();
+    }
 }
 
 Character& Character::operator=(const Character& character) {
-    this->_name = character.getName();
+    _name = character.getName();
+    for (int i = 0; i < 4; i++) {
+        if (this->inventory[i])
+            delete this->inventory[i];
+        if (character.inventory[i])
+            this->inventory[i] = character.inventory[i]->clone();
+    }
     return (*this);
 }
 

@@ -17,7 +17,7 @@ Ice::Ice() : AMateria("ice") {
     std::cout << _type << " is constracted" << std::endl;
 }
 
-Ice::Ice(const Ice& copy) {
+Ice::Ice(const Ice& copy) :AMateria(copy.getType()) {
     this->_type = copy.getType();
 }
 

@@ -17,7 +17,7 @@ Cure::Cure() : AMateria("cure") {
     std::cout << _type << " has been constracted" << std::endl;
 }
 
-Cure::Cure(const Cure& cure) {
+Cure::Cure(const Cure& cure) : AMateria(cure.getType()){
     this->_type = cure.getType();
 }
 

@@ -20,8 +20,8 @@
 class Character : public ICharacter {
     private:
         std::string _name;
-        AMateria *(inventory[4]);
-        AMateria *(starch[4]);
+        AMateria *inventory[4];
+        AMateria *starch[4];
     public:
         Character();
         ~Character();

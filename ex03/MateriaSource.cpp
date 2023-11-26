@@ -25,13 +25,22 @@ MateriaSource::~MateriaSource() {
     }
 }
 
-// MateriaSource::MateriaSource(const MateriaSource& copy) {
-    
-// }
+MateriaSource::MateriaSource(const MateriaSource& copy) {
+   for (int i = 0; i < 4; i++) {
+        if(copy.inventory[i])
+            this->inventory[i] = copy.inventory[i]->clone();
+   } 
+}
 
-//  MateriaSource& MateriaSource::operator=(const MateriaSource& materiasource) {
-    
-// }
+ MateriaSource& MateriaSource::operator=(const MateriaSource& materiasource) {
+    for (int i = 0; i < 4; i++) {
+        if (this->inventory[i])
+            delete this->inventory[i];
+        if (materiasource.inventory[i])
+            this->inventory[i] = materiasource.inventory[i]->clone();
+    }
+    return (*this);
+}
 
 void MateriaSource::learnMateria(AMateria* learn) {
     for (int i = 0; i < 4; i++) {
