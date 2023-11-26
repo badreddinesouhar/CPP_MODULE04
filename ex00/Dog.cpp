@@ -21,7 +21,7 @@ Dog::~Dog() {
     std::cout << "Dog deconstractor" << std::endl;    
 }
 
-Dog::Dog(const Dog& dog) {
+Dog::Dog(const Dog& dog) : Animal(dog) {
     this->type = dog.getType();
 }
 

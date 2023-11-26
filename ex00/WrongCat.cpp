@@ -29,7 +29,7 @@ WrongCat& WrongCat::operator=(const WrongCat& wrongcat) {
     return *this;
 }
 
-WrongCat::WrongCat(const WrongCat& copy) {
+WrongCat::WrongCat(const WrongCat& copy) : WrongAnimal(copy) {
     std::cout << "copy desctractor" <<std::endl;
     *this = copy;
 }

@@ -22,7 +22,7 @@ Cat::Cat(std::string name) {
     std::cout << "cat inisializer" << std::endl;
 }
 
-Cat::Cat(const Cat& cat) {
+Cat::Cat(const Cat& cat) : Animal(cat) {
     this->type = cat.getType();
 }
 

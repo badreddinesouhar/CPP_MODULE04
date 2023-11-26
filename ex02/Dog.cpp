@@ -23,7 +23,7 @@ Dog::~Dog() {
     delete this->b;
 }
 
-Dog::Dog(const Dog& dog) {
+Dog::Dog(const Dog& dog) : Animal(dog) {
     this->type = dog.type;
     delete this->b;
     this->b = new Brain(*(dog.b));
