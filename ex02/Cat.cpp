@@ -6,14 +6,14 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:16:23 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/25 08:12:04 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/27 10:03:16 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 Cat::Cat() {
-    std::cout << "Cat constractour" << std::endl;
+    std::cout << "Cat constructor" << std::endl;
     type = "cat";
     b = new Brain();
 }
@@ -25,7 +25,8 @@ Cat::Cat(std::string name) {
 
 Cat::Cat(const Cat& cat) : Animal(cat) {
     this->type = cat.type;
-    this->b = new Brain(*(cat.b));
+    if (this->b)
+        this->b = new Brain(*(cat.b));
 }
 
 Cat& Cat::operator=(const Cat& cat) {
@@ -37,7 +38,7 @@ Cat& Cat::operator=(const Cat& cat) {
     return (*this);
 }
 Cat::~Cat() {
-    std::cout << "Cat destrctour" << std::endl;
+    std::cout << "Cat destructor" << std::endl;
     delete b;
 }
 

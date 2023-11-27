@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:02:27 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 14:16:45 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/27 12:27:27 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,23 @@ Character::Character() {
         inventory[i] = NULL;
         starch[i] = NULL;
     } 
-    // std::cout << "default constractor has been called" << std::endl;
+    std::cout << "Character default constractor has been called" << _name << "is destroyed" << std::endl;
 }
 
 Character::~Character() {
     for(int i = 0; i < 4; i++ ) {
-        if(starch[i])
+        if(starch[i]) {
+            std::cout << "ana trash" << i << std::endl;
             delete starch[i];
+        }
     }
     for (int i = 0; i < 4; i++) {
-        if(inventory[i])
+        if(inventory[i]) {
+            std::cout << "ana invent" << i << std::endl;  
             delete inventory[i];
+        }
     }
-    // std::cout << _name << " is destroyed" << std::endl;
+    std::cout << _name << " is destroyed" << std::endl;
 }
 
 Character::Character(std::string name) {

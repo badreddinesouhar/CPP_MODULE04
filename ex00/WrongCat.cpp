@@ -6,14 +6,14 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 09:25:12 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 10:24:39 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/27 10:00:17 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
 
 WrongCat::WrongCat() {
-    std::cout << "the wrong cat constractor has been called" << std::endl;
+    std::cout << "the wrong cat constructor has been called" << std::endl;
     type = "wrong cat";
 }
 
@@ -30,7 +30,7 @@ WrongCat& WrongCat::operator=(const WrongCat& wrongcat) {
 }
 
 WrongCat::WrongCat(const WrongCat& copy) : WrongAnimal(copy) {
-    std::cout << "copy desctractor" <<std::endl;
+    std::cout << "copy destructor" <<std::endl;
     *this = copy;
 }
 

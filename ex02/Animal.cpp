@@ -6,24 +6,24 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:58:45 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 13:01:58 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/27 10:00:53 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 Animal::Animal() {
-    std::cout << "the Animal constrauctor has been called" << std::endl;
+    std::cout << "the Animal constructor has been called" << std::endl;
     type = "animal";
 }
 
 Animal::~Animal() {
-    std::cout << "the Animal deconstractor has been called" << std::endl;
+    std::cout << "the Animal destructor has been called" << std::endl;
 }
 
 Animal::Animal(const Animal& animal) {
     this->type = animal.getType();
-    std::cout << "copy constractor has been called" << std::endl;
+    std::cout << "copy constructor has been called" << std::endl;
 }
 
 Animal& Animal::operator=(const Animal &animal) {

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cure.cpp                                           :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:12:07 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 13:04:11 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/27 10:10:35 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Cure& Cure::operator=(const Cure& copy) {
 }
 
 Cure::~Cure() {
-    // std::cout << this->_type << " has been destroyed" << std::endl;
+    std::cout << this->_type << " has been destroyed" << std::endl;
 }
 
 AMateria* Cure::clone() const {

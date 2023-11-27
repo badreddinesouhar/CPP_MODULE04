@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:12:14 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 13:04:38 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/27 10:10:28 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Ice& Ice::operator=(const Ice& ice) {
 }
 
 Ice::~Ice() {
-    // std::cout << "ice is destroyed" << std::endl;
+    std::cout << "ice is destroyed" << std::endl;
 }
 
 AMateria* Ice::clone() const {

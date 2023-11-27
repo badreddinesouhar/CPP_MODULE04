@@ -6,26 +6,27 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:28:36 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/25 08:11:26 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/27 10:03:33 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 Dog::Dog() {
-    std::cout << "Dog constractour" << std::endl;
+    std::cout << "Dog constructor" << std::endl;
     type = "dog";
     b = new Brain();
 }
 
 Dog::~Dog() {
-    std::cout << "Dog deconstractor" << std::endl;
+    std::cout << "Dog destructor" << std::endl;
     delete this->b;
 }
 
 Dog::Dog(const Dog& dog) :Animal(dog) {
     this->type = dog.type;
-    this->b = new Brain(*(dog.b));
+    if(this->b)
+        this->b = new Brain(*(dog.b));
 }
 
 Dog& Dog::operator=(const Dog &dog) {

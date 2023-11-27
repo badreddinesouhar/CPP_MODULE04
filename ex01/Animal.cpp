@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:58:45 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 00:16:01 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/27 12:38:22 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,17 @@ Animal::Animal() {
 }
 
 Animal::~Animal() {
-    std::cout << "the Animal deconstractor has been called" << std::endl;
+    std::cout << "the Animal destructor has been called" << std::endl;
 }
 
 Animal::Animal(const Animal& animal) {
     this->type = animal.getType();
-    std::cout << "copy constractor has been called" << std::endl;
+    std::cout << "Animal copy constractor has been called" << std::endl;
 }
 
 Animal& Animal::operator=(const Animal &animal) {
     this->type = animal.getType();
+    std::cout << "animal copy assignment opertar is called" << std::endl;
     return *this;
 }
 

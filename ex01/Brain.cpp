@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 10:29:58 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/25 08:07:13 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/27 12:57:11 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,16 @@ Brain::Brain() {
     for (int i = 0; i < 100; i++) {
         ideas[i] = "Brain idea";
     }
-    std::cout << "Brain constractor has been called" << std::endl;
+    std::cout << "Brain constructor has been called" << std::endl;
 }
 
 Brain::~Brain() {
-    std::cout << "Brain deconstractor has been called" << std::endl;
+    std::cout << "Brain destructor has been called" << std::endl;
     delete[] ideas;
 }
 
 Brain& Brain::operator=(const Brain& brain) {
+    std::cout << "copy assignement has been called" << std::endl;
     for(int i = 0; i < 100; i++) {
         this->ideas[i] = brain.ideas[i];
     }
@@ -33,6 +34,7 @@ Brain& Brain::operator=(const Brain& brain) {
 }
 
 Brain::Brain(const Brain& copy) {
+    std::cout << "copy constructor has been called" << std::endl;
     *this = copy;
 }
 

@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 09:25:45 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/26 14:17:20 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/27 12:31:35 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,18 @@ int main() {
     ICharacter* me = new Character("me");
     
     AMateria* tmp;
-    tmp = src->createMateria("ice");
-    me->equip(tmp);
     tmp = src->createMateria("cure");
     me->equip(tmp);
+    tmp = src->createMateria("ice");
+    me->equip(tmp);
+    
+    me->unequip(0);
+    me->unequip(1);
+    // tmp = src->createMateria("cure");
+    // me->equip(tmp);
+    
+    // tmp = src->createMateria("cure");
+    // me->equip(tmp);
     
     ICharacter* bob = new Character("bob");
     

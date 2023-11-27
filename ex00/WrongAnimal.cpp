@@ -6,14 +6,14 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 09:25:06 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/24 10:16:11 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/27 10:00:13 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal() {
-    std::cout << "the Wrong Animal constractor has been called" << std::endl;
+    std::cout << "the Wrong Animal constructor has been called" << std::endl;
     type = "wrong animal";
 }
 
@@ -29,7 +29,7 @@ WrongAnimal::WrongAnimal(const WrongAnimal &copy) {
 }
 
 WrongAnimal::~WrongAnimal() {
-    std::cout << "the wrong animal deconstractor" << std::endl;
+    std::cout << "the wrong animal destructor" << std::endl;
 }
 
 void WrongAnimal::makeSound() const {

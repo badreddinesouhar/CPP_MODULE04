@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 10:29:58 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/25 08:10:58 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/27 10:00:57 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ Brain::Brain() {
     for (int i = 0; i < 100; i++) {
         ideas[i] = "Brain idea";
     }
-    std::cout << "Brain constractor has been called" << std::endl;
+    std::cout << "Brain constructor has been called" << std::endl;
 }
 
 Brain::~Brain() {
-    std::cout << "Brain deconstractor has been called" << std::endl;
+    std::cout << "Brain destructor has been called" << std::endl;
     delete[] ideas;
 }
 
