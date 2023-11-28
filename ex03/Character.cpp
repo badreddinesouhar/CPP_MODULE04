@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 09:02:27 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/27 12:27:27 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/28 07:49:48 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,22 @@ Character::Character() {
     _name = "character";
     for (int i = 0; i < 4; i++) {
         inventory[i] = NULL;
-        starch[i] = NULL;
+        trash[i] = NULL;
     } 
     std::cout << "Character default constractor has been called" << _name << "is destroyed" << std::endl;
 }
 
 Character::~Character() {
-    for(int i = 0; i < 4; i++ ) {
-        if(starch[i]) {
-            std::cout << "ana trash" << i << std::endl;
-            delete starch[i];
-        }
-    }
     for (int i = 0; i < 4; i++) {
         if(inventory[i]) {
-            std::cout << "ana invent" << i << std::endl;  
+            std::cout << "ana invent " << i << std::endl;  
             delete inventory[i];
+        }
+    }
+    for(int i = 0; i < 4; i++ ) {
+        if(trash[i]) {
+            std::cout << "ana trash " << i << std::endl;
+            delete trash[i];
         }
     }
     std::cout << _name << " is destroyed" << std::endl;
@@ -78,8 +78,8 @@ void Character::equip(AMateria *m) {
         }
     }
     for(int i = 0; i < 4; i++ ) {
-        if(starch[i])
-            delete starch[i];
+        if(trash[i]) 
+            delete trash[i];
     }
     delete m;
 }
@@ -87,8 +87,10 @@ void Character::equip(AMateria *m) {
 void Character::unequip(int idx) {
     if (idx >= 0 && idx < 4) {
         for (int i = 0; i < 4; i++) {
-            if (starch[i] == NULL)
-                starch[i] = inventory[idx];
+            if (trash[i] == NULL) {
+                trash[i] = inventory[idx]->clone();
+                break;
+            }
         }
         inventory[idx] = NULL;
     }

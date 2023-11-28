@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 10:29:58 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/27 10:00:57 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/28 07:31:10 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ Brain::~Brain() {
 }
 
 Brain& Brain::operator=(const Brain& brain) {
+    this->ideas = new std::string[100];
     for(int i = 0; i < 100; i++) {
         this->ideas[i] = brain.ideas[i];
     }

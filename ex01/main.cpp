@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:22:35 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/11/27 13:19:27 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/11/28 07:30:18 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int main() {
     // for (int i = 0; i < arraySize; ++i) {
     //     delete animalArray[i];
     // }
-    // main_();
     Dog basic;
     {
     Dog tmp = basic;
