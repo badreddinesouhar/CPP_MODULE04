@@ -26,15 +26,16 @@ Brain::~Brain() {
 }
 
 Brain& Brain::operator=(const Brain& brain) {
-    std::cout << "copy assignement has been called" << std::endl;
+    this->ideas = new std::string[100];
     for(int i = 0; i < 100; i++) {
         this->ideas[i] = brain.ideas[i];
     }
+    std::cout << "Brain copy assignement operator has been called" << std::endl;
     return *this;
 }
 
 Brain::Brain(const Brain& copy) {
-    std::cout << "copy constructor has been called" << std::endl;
+    std::cout << "Brain copy constructor has been called" << std::endl;
     *this = copy;
 }
 

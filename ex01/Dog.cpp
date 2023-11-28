@@ -25,9 +25,13 @@ Dog::~Dog() {
 
 Dog::Dog(const Dog& dog) :Animal(dog) {
     this->type = dog.type;
-    if (this->b)
-        this->b = new Brain(*(dog.b));
+    this->b = new Brain(*(dog.getBrain()));
     std::cout << "dog copy constractor is called" << std::endl;
+}
+
+Brain *Dog::getBrain( void ) const
+{
+	return (this->b);
 }
 
 Dog& Dog::operator=(const Dog &dog) {
